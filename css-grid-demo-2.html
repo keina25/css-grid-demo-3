@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      .container {
+        display: grid;
+        grid-template-rows: 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        width: 800px;
+        border: 1px solid red;
+        grid-gap: 12px;
+      }
+      .container > div {
+        border: 1px solid black;
+      }
+      /* 这里也可以用.a,.b,.c,.d,.e,.f */
+      .e {
+        grid-column-start: 2;
+        grid-column-end: 4;
+        background: #333;
+      }
+      .image {
+        width: 191px;
+        height: 191px;
+        background: grey;
+      }
+      /* 这里可以用来做平均布局，而且可以不用margin:-12px，直接用grid-gap:12px就可以了 */
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="image"></div>
+      <div class="image"></div>
+      <div class="image"></div>
+      <div class="image"></div>
+      <div class="image"></div>
+      <div class="image"></div>
+      <div class="image"></div>
+    </div>
+  </body>
+</html>
